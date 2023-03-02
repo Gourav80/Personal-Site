@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+<body>
+    <h4>Contact Details :</h4>
+    <p><em>Mobile No :</em><strong>123456789</strong></p>
+    <p><em>Email add. :</em><strong>gourav@gmail.com</strong></p>
+
+    <!-- <form> element which are used to take the input from the user. -->
+    <!-- action attribute is used becz, what should happens when we submit the form or where you want to go after submitting the form. method contains the value by through you want to submit the data to database either throw GET method or POST Method. By using GET method data is visible to the user which is not secure. But by using POST method data is submitted by using JSON so which is not visible to the user. -->
+    <!-- enctype attribute specifies how form-data should be encoded before sending it to the server. The form-data is encoded to "application/x-www-form-urllencoded" by default. There are three value of enctype attribute :
+        1. "application/x-www-form-urllencoded" -> by default
+        2. "multipart/form-data" -> Use this if the form contains <input> element with type=file
+        3. "text/plain" -> useful for debugging purpose.
+        These values can be overridden by formencytype on <button>, <input type="submit"> or <input type="iamge"> elements.
+    -->
+    <!-- If the action="mailto:email_address_your" is not working in browser then :
+            1. First goto Privacy and Security
+            2. Goto sit settings
+            3. Goto addition settings
+            4. click on Protocal handalers
+            5. Allows sits can handle protocols
+            6. If the google mail is in not allowed to handle protocols then remove it from there.
+     -->
+    <form action="mailto:gourav@gmail.com" method="POST" enctype="text/plain">
+        <!-- <label> element which are used to give the label to the input it has attribute for="" which contains id="" of input. So if we click on <label> element then we can also enter the data inside input but without <label> for="" attribute if we click on <label> then we can not enter data inside the <input> element. -->
+        <!--  -->
+        <div>
+            <label for="userName">Name </label>
+            <input type="text" name="userName" id="userName">
+        </div>
+
+        <div>
+            <label for="userEmail">Email</label>
+            <input type="email" name="userEmail" id="userEmail">
+        </div>
+
+        <!-- require attribute besically used because if we data of user is more important that time we use required attribute. So if the data is not fill inside required input then we are not able  submit the form  -->
+        <div>
+            <label for="userMob">Mobile No. </label>
+            <input type="text" name="userMob" id="userMob" required>
+        </div>
+        
+        <div>
+            <label for="color">Choose Form color</label>
+            <input type="color" name="color" id="color">
+        </div>
+        
+        <!-- Hidden tags besically used becz if we want to take the user data without taking from the user like system info or other info these time of data we can take by using hidden type of input which not visible to user. -->
+        <div>
+            <input type="hidden" name="color" id="color">
+        </div>
+
+        <div>
+            <label for="birth">Date of Birth</label>
+            <input type="date" name="birth" id="birth">
+        </div>
+        <input type="submit" value="Submit Data">
+    </form>
+</body>
+</html>
